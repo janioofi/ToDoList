@@ -38,5 +38,4 @@ public class Tarefa {
     @JoinColumn(name = "id_usuario")
     @Enumerated(EnumType.ORDINAL)
     private Usuario usuario;
-
 }

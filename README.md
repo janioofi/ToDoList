@@ -1,6 +1,9 @@
 ## Sobre
 Este projeto foi desenvolvido utilizando o framework Spring Boot com o objetivo de criar uma API RESTful para gerenciar tarefas. A seguir, destacam-se os principais aspectos do desenvolvimento:
 
+### Video de como testar a aplicação
+Link: https://drive.google.com/file/d/1MqqattIVLg8gVwbWaDPqto6KkyVzQwxj/view?usp=sharing
+
 #### Estrutura do projeto
 - Camadas: O projeto segue a arquitetura em camadas, separando as responsabilidades em controladores (controllers), serviços (services), repositórios (repositories) e entidades de domínio (domain entities).
 - Pacotes: O código está organizado em pacotes bem definidos para facilitar a manutenção e a escalabilidade.

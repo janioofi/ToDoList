@@ -14,13 +14,14 @@ Link: https://drive.google.com/file/d/1MqqattIVLg8gVwbWaDPqto6KkyVzQwxj/view?usp
 - Spring Data
 - Spring Security
 - PostgreSQL
+- H2
 - JWT
 - Java 17
 
 ### Segurança da aplicação
 Para ter acesso a aplicação, necessário efetuar o registro e depois o login, após isso você terá acesso a todos os endpoints da aplicação, mas existem regras na aplicação
 - Todas as tarefas, tem um vinculo com o usuário que a criou.
-- Todos os usuários conseguem verificar as tarefas do sistema, mas APENAS, o usuário que a criou pode fazer uma altereção, como PUT ou DELETE. Caso você tente alterar ou apagar uma tarefa que não seja vinculada a você, será apresetado um erro.
+- Todos os usuários conseguem verificar as tarefas do sistema, mas APENAS, o usuário que a criou pode fazer uma alteração, como PUT ou DELETE. Caso você tente alterar ou apagar uma tarefa que não seja vinculada a você, será apresetado um erro.
 - O mesmo vale para os usuários, a pessoa que está logada, consegue verficar todos os usuários do sistema, junto com suas informações, mas caso ele queira apagar ou atualizar alguma informação, não irá conseguir, pois apenas o usuário pode fazer alguma alteração no seu cadastro.
 
 #### Configurações de Segurança

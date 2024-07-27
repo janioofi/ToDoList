@@ -32,7 +32,7 @@ public class UsuarioController {
     }
 
     @PutMapping(ID)
-    public ResponseEntity<UsuarioResponseDto> findById(@RequestBody @Valid UsuarioRequestDto usuario, @PathVariable Long id, HttpServletResponse response){
+    public ResponseEntity<UsuarioResponseDto> update(@RequestBody @Valid UsuarioRequestDto usuario, @PathVariable Long id, HttpServletResponse response){
         return ResponseEntity.ok().body(service.update(id, usuario, response));
     }
 

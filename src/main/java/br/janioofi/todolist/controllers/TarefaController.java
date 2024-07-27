@@ -37,12 +37,12 @@ public class TarefaController {
     }
 
     @PutMapping(ID)
-    public ResponseEntity<TarefaResponseDto> create(@PathVariable Long id, @RequestBody TarefaRequestDto tarefaRequestDto, HttpServletResponse response){
+    public ResponseEntity<TarefaResponseDto> update(@PathVariable Long id, @RequestBody TarefaRequestDto tarefaRequestDto, HttpServletResponse response){
         return ResponseEntity.ok().body(service.update(id, tarefaRequestDto, response));
     }
 
     @DeleteMapping(ID)
-    public ResponseEntity<TarefaResponseDto> delete(@PathVariable Long id, HttpServletResponse response){
+    public ResponseEntity<Void> delete(@PathVariable Long id, HttpServletResponse response){
         service.delete(id, response);
         return ResponseEntity.ok().build();
     }

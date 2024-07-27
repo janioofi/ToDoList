@@ -15,5 +15,9 @@ spring:
     console:
       enabled: true
       path: /h2-console
+api:
+  security:
+    token:
+      secret: "IASJ901H03H1902H312312329312312O03J12093J12093J10"
 server:
   port: 8080

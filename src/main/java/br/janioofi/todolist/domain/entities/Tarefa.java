@@ -2,7 +2,6 @@ package br.janioofi.todolist.domain.entities;
 
 import br.janioofi.todolist.domain.enums.Status;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,11 +21,9 @@ public class Tarefa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idTarefa;
 
-    @NotBlank
     @NotNull
     private String descricao;
 
-    @NotBlank
     @NotNull
     @Enumerated(EnumType.STRING)
     private Status status;

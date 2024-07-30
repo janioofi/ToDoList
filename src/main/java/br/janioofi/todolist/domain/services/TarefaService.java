@@ -44,7 +44,7 @@ public class TarefaService {
         Usuario usuario = usuarioRepository.findByUsuario(user);
         tarefa.setDescricao(tarefaRequestDto.descricao());
         tarefa.setStatus(tarefaRequestDto.status());
-        tarefa.setDataCriacao(LocalDateTime.now());
+        tarefa.setDataCriacao(LocalDateTime.now().minusHours(3)); //Time zone brasileiro para servidor do deploy
         tarefa.setUsuario(usuario);
         log.info("Criando nova tarefa");
         return Mapper.toDto(repository.save(tarefa));
@@ -56,7 +56,7 @@ public class TarefaService {
             validaUsuario(response, data);
             data.setDescricao(tarefaRequestDto.descricao());
             data.setStatus(tarefaRequestDto.status());
-            data.setDataAtualizacao(LocalDateTime.now());
+            data.setDataAtualizacao(LocalDateTime.now().minusHours(3));//Time zone brasileiro para servidor do deploy
             return repository.save(data);
         }).orElseThrow(() -> new ResourceNotFoundException(NENHUMA_TAREFA + id));
         log.info("Realizando uma atualização para tarefa com ID: {}", id);
